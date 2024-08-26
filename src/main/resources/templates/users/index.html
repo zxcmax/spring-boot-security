@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'Пользователь: ' + ${user.firstName} + ' ' + ${user.lastName}"></title>
+</head>
+<body>
+<div th:replace="~{icludes/header :: header}"></div>
+<h1 th:text="'Пользователь: ' + ${user.firstName} + ' ' + ${user.lastName}"></h1>
+
+<div>
+    <p>ID: <span th:text="${user.id}"></span></p>
+    <p>Имя: <span th:text="${user.firstName}"></span></p>
+    <p>Фамилия: <span th:text="${user.lastName}"></span></p>
+    <p>Возраст: <span th:text="${user.age}"></span></p>
+    <p>Email: <span th:text="${user.email}"></span></p>
+    <p>Роли: <span th:text="${user.roles}"></span></p>
+</div>
+</body>
+</html>
